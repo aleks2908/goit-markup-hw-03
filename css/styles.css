@@ -2,6 +2,8 @@
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -15,6 +17,17 @@ img {
 .button {
   font-family: inherit;
   cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* *,
@@ -89,23 +102,32 @@ body {
 /* ========== ГЕРОЙ =========== */
 .hero {
   background-color: var(--secondary-bg-color);
+  text-align: center;
 }
 
 .hero-title {
   color: var(--primery-bg-color);
+  margin: 0 auto 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
+
   text-transform: uppercase;
   letter-spacing: 0.06em;
+
+  width: 696px;
 }
 
 .hero button {
+  min-width: 216px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: 0px;
 }
 
 .hero button:hover,
@@ -126,6 +148,17 @@ body {
 }
 
 /* ========== НАШІ ПЕРЕВАГИ =========== */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* .section.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+} */
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -142,11 +175,14 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .feature-list .title {
   font-size: 14px;
   line-height: 1.14;
+
+  margin-bottom: 10px;
 }
 
 .feature-list .text {
@@ -163,12 +199,15 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-list p {
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-text-color);
+  margin-bottom: 30px;
 }
 
 /* ========== ФУТЕР =========== */
@@ -183,7 +222,11 @@ body {
 
 .footer .logo {
   color: var(--accent-color);
+  display: inline-block;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
+
 .footer .logo span,
 .footer .adress {
   color: var(--primery-bg-color);
@@ -196,6 +239,14 @@ body {
 
 .footer .contacts {
   color: var(--footer-contacts-color);
+}
+
+address .list {
+  display: inline-block;
+}
+
+address .list:last-child {
+  margin-bottom: 60px;
 }
 
 /* ================================ */
@@ -225,4 +276,16 @@ body {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.88;
+}
+
+/* ============================================== */
+/* ========== Контейнери і Флексбокси =========== */
+/* ============================================== */
+
+.contaner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* background-color: teal; */
 }
