@@ -1,5 +1,4 @@
 /* ===== ОБНУЛЕННЯ ===== */
-
 ul {
   list-style: none;
   padding: 0;
@@ -29,12 +28,6 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
 /* ===== /ОБНУЛЕННЯ ===== */
 
 :root {
@@ -49,6 +42,8 @@ p {
   --logo-text-black: #000000;
   --taam-bg-color: #f5f4fa;
   --btn-passive-bg-color: #f5f4fa;
+
+  --project-list-border-color: #eeeeee;
 }
 
 body {
@@ -59,11 +54,28 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* ========== Контейнери і Флексбокси =========== */
+.contaner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 /* ========== ХЕДЕР =========== */
+
+nav {
+  display: flex;
+  align-items: center;
+}
 
 .header-nav {
   display: flex;
   align-items: center;
+}
+
+.heder-border {
+  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -83,10 +95,6 @@ body {
   align-items: center;
   margin-left: 93px;
 }
-
-/* .site-nav li {
-  margin-right: 50px;
-} */
 
 .site-nav li:not(:last-child) {
   margin-right: 50px;
@@ -116,11 +124,6 @@ body {
   margin-left: auto;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-}
-
 .auth-nav li + li {
   margin-left: 50px;
 }
@@ -141,7 +144,6 @@ nav {
 .hero {
   background-color: var(--secondary-bg-color);
   text-align: center;
-  margin-bottom: 94px;
 }
 
 .hero-title {
@@ -154,7 +156,6 @@ nav {
 
   text-transform: uppercase;
   letter-spacing: 0.06em;
-
   width: 696px;
 }
 
@@ -188,14 +189,13 @@ nav {
 
 /* ========== НАШІ ПЕРЕВАГИ =========== */
 
-.section {
-  margin-bottom: 94px;
+.section.features {
+  padding-top: 94px;
 }
 
-/* .section.no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
-} */
+.section {
+  padding-bottom: 94px;
+}
 
 .visually-hidden {
   position: absolute;
@@ -241,10 +241,9 @@ nav {
 }
 
 /* ========== НАША КОМАНДА =========== */
-.team-bg {
+.section.team-bg {
   background-color: var(--taam-bg-color);
   padding-top: 94px;
-  padding-bottom: 94px;
   margin-bottom: 0;
 }
 
@@ -367,13 +366,16 @@ address .list:last-child {
 }
 
 .portfolio-list {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
 }
 
 .project-list li {
+  width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  border-bottom: 1px solid var(--project-list-border-color);
+  border-right: 1px solid var(--project-list-border-color);
+  border-left: 1px solid var(--project-list-border-color);
 }
 
 .project-list li:nth-last-child(-n + 3) {
@@ -388,7 +390,6 @@ address .list:last-child {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
-  /* min-width: 575px; */
 }
 
 .button-filter li:not(:last-child) {
@@ -397,16 +398,4 @@ address .list:last-child {
 
 .project-list img {
   margin-bottom: 20px;
-}
-
-/* ============================================== */
-/* ========== Контейнери і Флексбокси =========== */
-/* ============================================== */
-
-.contaner {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  /* background-color: teal; */
 }
